@@ -1,13 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-    </PropertyGroup>
+      <UserSecretsId>3d983cba-96b0-4c97-938a-9347938c0f92</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="FluentAssertions" Version="6.12.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
       <PackageReference Include="xunit" Version="2.5.1" />
       <PackageReference Include="Xunit.DependencyInjection" Version="8.9.0" />
