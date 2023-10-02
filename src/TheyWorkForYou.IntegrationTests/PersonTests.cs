@@ -38,6 +38,7 @@ public class PersonTests
             person.Party.Should().Be(TestData.JacobReesMogg.Party);
 
             person.MemberId.Should().NotBeNullOrEmpty();
+            person.EnteredReason.Should().NotBeNullOrEmpty();
         }
     }
     
