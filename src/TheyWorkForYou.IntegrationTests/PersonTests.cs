@@ -18,6 +18,7 @@ public class PersonTests
         var person = await _client.GetPersonAsync(TestData.NadiaWhittome.PersonId);
         person.Should().NotBeNull();
         person.Id.Should().Be(TestData.NadiaWhittome.PersonId);
+        person.FullName.Should().Be(TestData.NadiaWhittome.FullName);
     }
     
     private static class TestData
@@ -25,6 +26,7 @@ public class PersonTests
         public static class NadiaWhittome
         {
             public const string PersonId = "25845";
+            public const string FullName = "Nadia Whittome";
         }
     }
 }
