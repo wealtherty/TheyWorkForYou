@@ -32,6 +32,8 @@ public class PersonTests
         foreach (var person in persons)
         {
             person.Id.Should().Be(TestData.JacobReesMogg.Id);
+            person.GivenName.Should().Be(TestData.JacobReesMogg.GivenName);
+            person.FamilyName.Should().Be(TestData.JacobReesMogg.FamilyName);
             person.FullName.Should().Be(TestData.JacobReesMogg.FullName);
             person.Constituency.Should().Be(TestData.JacobReesMogg.Constituency);
             person.House.Should().Be(TestData.JacobReesMogg.House);
@@ -57,12 +59,15 @@ public class PersonTests
             MemberId = "42304",
             EnteredHouse = new DateTime(2019, 12, 13),
             EnteredReason = "general_election",
+            LeftHouse = null,
             LeftReason = "still_in_office"
         };
 
         public static readonly Person JacobReesMogg = new()
         {
             Id = "24926",
+            GivenName = "Jacob",
+            FamilyName = "Rees-Mogg",
             FullName = "Jacob Rees-Mogg",
             Constituency = "North East Somerset",
             House = House.HouseOfCommons,
