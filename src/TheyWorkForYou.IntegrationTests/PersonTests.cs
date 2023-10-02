@@ -53,7 +53,8 @@ public class PersonTests
             Party = "Labour",
             MemberId = "42304",
             EnteredHouse = new DateTime(2019, 12, 13),
-            EnteredReason = "general_election"
+            EnteredReason = "general_election",
+            LeftReason = "still_in_office"
         };
 
         public static readonly Person JacobReesMogg = new()

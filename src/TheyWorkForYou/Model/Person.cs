@@ -29,4 +29,8 @@ public class Person
     [JsonProperty("left_house")]
     [JsonConverter(typeof(NullableDateTimeConverter))]
     public DateTime? LeftHouse { get; set; }
+    
+    [JsonProperty("left_reason")]
+    public string LeftReason { get; set; }
+    
 }
