@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using TheyWorkForYou.Model;
 using Xunit;
 
 namespace TheyWorkForYou.IntegrationTests;
@@ -15,18 +16,17 @@ public class PersonTests
     [Fact]
     public async Task Get_Person_should_return_Nadia_Whittome()
     {
-        var person = await _client.GetPersonAsync(TestData.NadiaWhittome.PersonId);
+        var person = await _client.GetPersonAsync(TestData.NadiaWhittome.Id);
         person.Should().NotBeNull();
-        person.Id.Should().Be(TestData.NadiaWhittome.PersonId);
-        person.FullName.Should().Be(TestData.NadiaWhittome.FullName);
+        person.Should().BeEquivalentTo(TestData.NadiaWhittome);
     }
     
     private static class TestData
     {
-        public static class NadiaWhittome
+        public static readonly Person NadiaWhittome = new()
         {
-            public const string PersonId = "25845";
-            public const string FullName = "Nadia Whittome";
-        }
+            Id = "25845",
+            FullName = "Nadia Whittome"
+        };
     }
 }
