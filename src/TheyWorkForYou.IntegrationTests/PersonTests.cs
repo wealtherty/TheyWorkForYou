@@ -48,7 +48,7 @@ public class PersonTests
             Id = "25845",
             FullName = "Nadia Whittome",
             Constituency = "Nottingham East",
-            House = "1",
+            House = House.HouseOfCommons,
             Party = "Labour",
             MemberId = "42304"
         };
@@ -58,7 +58,7 @@ public class PersonTests
             Id = "24926",
             FullName = "Jacob Rees-Mogg",
             Constituency = "North East Somerset",
-            House = "1",
+            House = House.HouseOfCommons,
             Party = "Conservative"
         };
     }

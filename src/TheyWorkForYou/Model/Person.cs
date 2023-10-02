@@ -10,7 +10,7 @@ public class Person
     [JsonProperty("member_id")]
     public string MemberId { get; set; }
     
-    public string House { get; set; }
+    public House House { get; set; }
     
     public string Constituency { get; set; }
     
