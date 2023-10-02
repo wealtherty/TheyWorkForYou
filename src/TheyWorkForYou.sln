@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheyWorkForYou.IntegrationTests", "TheyWorkForYou.IntegrationTests\TheyWorkForYou.IntegrationTests.csproj", "{8915F18E-6E81-4334-8DE2-5C91ABD0565D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheyWorkForYou", "TheyWorkForYou\TheyWorkForYou.csproj", "{5FFD55E7-C831-4543-9BE3-5345ACF7C1B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8915F18E-6E81-4334-8DE2-5C91ABD0565D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8915F18E-6E81-4334-8DE2-5C91ABD0565D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8915F18E-6E81-4334-8DE2-5C91ABD0565D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8915F18E-6E81-4334-8DE2-5C91ABD0565D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFD55E7-C831-4543-9BE3-5345ACF7C1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFD55E7-C831-4543-9BE3-5345ACF7C1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFD55E7-C831-4543-9BE3-5345ACF7C1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFD55E7-C831-4543-9BE3-5345ACF7C1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
