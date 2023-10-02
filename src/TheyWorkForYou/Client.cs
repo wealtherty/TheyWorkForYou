@@ -16,7 +16,7 @@ public class Client
         };
     }
     
-    public async Task<Person> GetPersonAsync(string id, CancellationToken cancellationToken = default)
+    public async Task<Person[]> GetPersonAsync(string id, CancellationToken cancellationToken = default)
     {
         var requestUri = $"/api/getPerson?id={id}&output=json&key={_settings.ApiKey}";
         
@@ -24,8 +24,6 @@ public class Client
 
         response.EnsureSuccessStatusCode();
 
-        var persons = await response.Content.ReadAsJsonAsync<Person[]>();
-
-        return persons.SingleOrDefault();
+        return await response.Content.ReadAsJsonAsync<Person[]>();
     }
 }

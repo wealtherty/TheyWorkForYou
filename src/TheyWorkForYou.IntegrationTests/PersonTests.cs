@@ -14,11 +14,25 @@ public class PersonTests
     }
 
     [Fact]
-    public async Task Get_Person_should_return_Nadia_Whittome()
+    public async Task Get_Persons_should_return_Nadia_Whittome()
     {
-        var person = await _client.GetPersonAsync(TestData.NadiaWhittome.Id);
-        person.Should().NotBeNull();
-        person.Should().BeEquivalentTo(TestData.NadiaWhittome);
+        var persons = await _client.GetPersonAsync(TestData.NadiaWhittome.Id);
+        persons.Should().NotBeNull();
+        persons.Length.Should().Be(1);
+        persons[0].Should().BeEquivalentTo(TestData.NadiaWhittome);
+    }
+
+    [Fact]
+    public async Task Get_Persons_should_return_Jacob_Rees_Mogg()
+    {
+        var persons = await _client.GetPersonAsync(TestData.JacobReesMogg.Id);
+        persons.Should().NotBeNull();
+        persons.Length.Should().BeGreaterThan(1);
+
+        foreach (var person in persons)
+        {
+            person.Should().BeEquivalentTo(TestData.JacobReesMogg);
+        }
     }
     
     private static class TestData
@@ -27,6 +41,12 @@ public class PersonTests
         {
             Id = "25845",
             FullName = "Nadia Whittome"
+        };
+
+        public static readonly Person JacobReesMogg = new()
+        {
+            Id = "24926",
+            FullName = "Jacob Rees-Mogg"
         };
     }
 }
