@@ -60,7 +60,9 @@ public class PersonTests
             EnteredHouse = new DateTime(2019, 12, 13),
             EnteredReason = "general_election",
             LeftHouse = null,
-            LeftReason = "still_in_office"
+            LeftReason = "still_in_office",
+            Url = "https://www.theyworkforyou.com/mp/25845/nadia_whittome/nottingham_east",
+            Image = "https://www.theyworkforyou.com/people-images/mpsL/25845.jpg"
         };
 
         public static readonly Person JacobReesMogg = new()

@@ -41,4 +41,10 @@ public class Person
     [JsonProperty("left_reason")]
     public string LeftReason { get; set; }
     
+ 
+    [JsonConverter(typeof(UrlConverter))]
+    public string Url { get; set; }
+
+    [JsonConverter(typeof(UrlConverter))]
+    public string Image { get; set; }
 }
