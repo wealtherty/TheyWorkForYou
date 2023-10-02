@@ -50,7 +50,9 @@ public class PersonTests
             Constituency = "Nottingham East",
             House = House.HouseOfCommons,
             Party = "Labour",
-            MemberId = "42304"
+            MemberId = "42304",
+            EnteredHouse = new DateTime(2019, 12, 13),
+            EnteredReason = "general_election"
         };
 
         public static readonly Person JacobReesMogg = new()

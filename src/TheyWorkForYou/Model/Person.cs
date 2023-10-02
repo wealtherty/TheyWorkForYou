@@ -19,5 +19,14 @@ public class Person
     [JsonProperty("full_name")]
     public string FullName { get; set; }
     
+    [JsonProperty("entered_house")]
+    public DateTime EnteredHouse { get; set; }
+    
+    [JsonProperty("entered_reason")]
+    public string EnteredReason { get; set; }
+    
+    // [JsonProperty("left_house")]
+    // public DateTime? LeftHouse { get; set; }
+    
     
 }
