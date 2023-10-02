@@ -15,12 +15,7 @@ public class Client
             BaseAddress = new Uri(settings.Domain)
         };
     }
-
-    public Task<string> GetApiKeyAsync()
-    {
-        return Task.FromResult(_settings.ApiKey);
-    }
-
+    
     public async Task<Person> GetPersonAsync(string id, CancellationToken cancellationToken = default)
     {
         var requestUri = $"/api/getPerson?id={id}&output=json&key={_settings.ApiKey}";
