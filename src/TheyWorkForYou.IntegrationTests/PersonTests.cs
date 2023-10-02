@@ -31,7 +31,13 @@ public class PersonTests
 
         foreach (var person in persons)
         {
-            person.Should().BeEquivalentTo(TestData.JacobReesMogg);
+            person.Id.Should().Be(TestData.JacobReesMogg.Id);
+            person.FullName.Should().Be(TestData.JacobReesMogg.FullName);
+            person.Constituency.Should().Be(TestData.JacobReesMogg.Constituency);
+            person.House.Should().Be(TestData.JacobReesMogg.House);
+            person.Party.Should().Be(TestData.JacobReesMogg.Party);
+
+            person.MemberId.Should().NotBeNullOrEmpty();
         }
     }
     
@@ -40,13 +46,20 @@ public class PersonTests
         public static readonly Person NadiaWhittome = new()
         {
             Id = "25845",
-            FullName = "Nadia Whittome"
+            FullName = "Nadia Whittome",
+            Constituency = "Nottingham East",
+            House = "1",
+            Party = "Labour",
+            MemberId = "42304"
         };
 
         public static readonly Person JacobReesMogg = new()
         {
             Id = "24926",
-            FullName = "Jacob Rees-Mogg"
+            FullName = "Jacob Rees-Mogg",
+            Constituency = "North East Somerset",
+            House = "1",
+            Party = "Conservative"
         };
     }
 }
