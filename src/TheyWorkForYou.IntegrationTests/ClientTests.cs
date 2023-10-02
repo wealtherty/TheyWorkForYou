@@ -13,9 +13,9 @@ public class ClientTests
     }
 
     [Fact]
-    public async Task Get_bool_should_be_true()
+    public async Task ApiKey_should_be_populated_by_user_secrets()
     {
-        var result = await _client.GetBoolAsync();
-        result.Should().BeTrue();
+        var result = await _client.GetApiKeyAsync();
+        result.Should().NotBeNullOrEmpty();
     }
 }

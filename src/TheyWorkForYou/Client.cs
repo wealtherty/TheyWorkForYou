@@ -2,8 +2,15 @@
 
 public class Client
 {
-    public Task<bool> GetBoolAsync()
+    private readonly Settings _settings;
+
+    public Client(Settings settings)
     {
-        return Task.FromResult(true);
+        _settings = settings;
+    }
+
+    public Task<string> GetApiKeyAsync()
+    {
+        return Task.FromResult(_settings.ApiKey);
     }
 }
