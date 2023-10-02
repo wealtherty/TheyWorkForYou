@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using TheyWorkForYou.Model;
 
 namespace TheyWorkForYou;
 
@@ -21,11 +21,11 @@ public class Client
         return Task.FromResult(_settings.ApiKey);
     }
 
-    public async Task<Person> GetPersonAsync(string id)
+    public async Task<Person> GetPersonAsync(string id, CancellationToken cancellationToken = default)
     {
         var requestUri = $"/api/getPerson?id={id}&output=json&key={_settings.ApiKey}";
         
-        var response = await _httpClient.GetAsync(requestUri).ConfigureAwait(false);
+        var response = await _httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
 
         response.EnsureSuccessStatusCode();
 
@@ -33,13 +33,4 @@ public class Client
 
         return persons.SingleOrDefault();
     }
-}
-
-public class Person
-{
-    [JsonProperty("person_id")]
-    public string Id { get; set; }
-    
-    [JsonProperty("full_name")]
-    public string FullName { get; set; }
 }
