@@ -17,6 +17,14 @@ public class Person
     
     public string Party { get; set; }
     
+    public string Title { get; set; }
+
+    [JsonProperty("given_name")]
+    public string GivenName { get; set; }
+
+    [JsonProperty("family_name")]
+    public string FamilyName { get; set; }
+    
     [JsonProperty("full_name")]
     public string FullName { get; set; }
     

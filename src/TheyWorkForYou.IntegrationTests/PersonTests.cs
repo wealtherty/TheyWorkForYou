@@ -47,6 +47,9 @@ public class PersonTests
         public static readonly Person NadiaWhittome = new()
         {
             Id = "25845",
+            Title = string.Empty,
+            GivenName = "Nadia",
+            FamilyName = "Whittome",
             FullName = "Nadia Whittome",
             Constituency = "Nottingham East",
             House = House.HouseOfCommons,
@@ -63,7 +66,7 @@ public class PersonTests
             FullName = "Jacob Rees-Mogg",
             Constituency = "North East Somerset",
             House = House.HouseOfCommons,
-            Party = "Conservative"
+            Party = "Conservative",
         };
     }
 }
