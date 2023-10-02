@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using TheyWorkForYou.Model.Converters;
 
 namespace TheyWorkForYou.Model;
 
@@ -25,8 +26,7 @@ public class Person
     [JsonProperty("entered_reason")]
     public string EnteredReason { get; set; }
     
-    // [JsonProperty("left_house")]
-    // public DateTime? LeftHouse { get; set; }
-    
-    
+    [JsonProperty("left_house")]
+    [JsonConverter(typeof(NullableDateTimeConverter))]
+    public DateTime? LeftHouse { get; set; }
 }
