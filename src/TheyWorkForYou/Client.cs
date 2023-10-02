@@ -13,4 +13,17 @@ public class Client
     {
         return Task.FromResult(_settings.ApiKey);
     }
+
+    public Task<Person> GetPersonAsync(string id)
+    {
+        return Task.FromResult(new Person
+        {
+            Id = id
+        });
+    }
+}
+
+public class Person
+{
+    public string Id { get; set; }
 }
