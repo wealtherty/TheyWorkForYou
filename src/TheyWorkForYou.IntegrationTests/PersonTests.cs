@@ -15,18 +15,22 @@ public class PersonTests
     [Fact]
     public async Task Person_should_not_be_null()
     {
-        const string id = "bob";
-
-        var person = await _client.GetPersonAsync(id);
+        var person = await _client.GetPersonAsync(TestData.NadiaWhittome.PersonId);
         person.Should().NotBeNull();
     }
 
     [Fact]
     public async Task Id_should_be_populated()
     {
-        const string id = "bob";
-        
-        var person = await _client.GetPersonAsync(id);
-        person.Id.Should().Be(id);
+        var person = await _client.GetPersonAsync(TestData.NadiaWhittome.PersonId);
+        person.Id.Should().Be(TestData.NadiaWhittome.PersonId);
+    }
+
+    private static class TestData
+    {
+        public static class NadiaWhittome
+        {
+            public const string PersonId = "25845";
+        }
     }
 }
